@@ -6,24 +6,24 @@ process.stdin.on('readable', function() {
     if (input !== null) {
     	var instruction = input.toString().trim();
     	switch (instruction) {
-			case '/exit':
-		    	process.stdout.write('Quitting app!\n');
+		case '/exit':
+			process.stdout.write('Quitting app!\n');
 		    	process.exit();
-		    break;
-		  	case 'version':
-		  		console.log(process.versions.node);
-		  	break;
-		  	case '/checkTimeH':
+		break;
+		case 'version':
+			console.log(process.versions.node);
+		break;
+		case '/checkTimeH':
 		    	OSinfo.checkTimeHour();
-		    break;
-		    case '/checkTimeM':
+		break;
+		case '/checkTimeM':
 		    	OSinfo.checkTimeMinuts();
-		    break;
-		    case '/getOSinfo':
+		break;
+		case '/getOSinfo':
 		    	OSinfo.print();
-		    break;
-		  	default:
-		    	process.stderr.write('Wrong instruction!\n');
-		}
+		break;
+		default:
+		  	process.stderr.write('Wrong instruction!\n');
+	}
     }
 });
