@@ -28,8 +28,10 @@ function checkTimeHour(){
 	var h = Math.floor(upTime/3600);
 	var m = Math.floor(upTime%3600/60);
 	var s = Math.floor(upTime%3600%60);
-    console.log('czas to ', colors.red(h) , ' godzin ', colors.yellow(m), ' minut ',colors.green(s), 'sekund');
-
+    console.log('czas to: ', 
+    			colors.red(h) , ' godzin ', 
+    			colors.yellow(m), ' minut ',
+    			colors.green(s), 'sekund');
 }
 
 function checkTimeMinuts(){
@@ -38,7 +40,6 @@ function checkTimeMinuts(){
 	var m = Math.floor(upTime/60);
 	var s = Math.floor(upTime%60%60);
     console.log('czas to ', m, ' minut ', s, 'sekund');
-
 }
 
 module.exports = {

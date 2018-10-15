@@ -24,6 +24,6 @@ process.stdin.on('readable', function() {
 		break;
 		default:
 		  	process.stderr.write('Wrong instruction!\n');
-	}
+		}
     }
 });
